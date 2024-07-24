@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000000;
+    margin-top: 50px;
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #f2f2f2;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+img {
+    margin-top: 20px;
+    max-width: 300px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #000000;
+    margin-top: 20px;
+}
+
+header {
+    background: #ffffff;
+    color: #000000;
+    padding: 0.5em 2em; /* Sesuaikan padding sesuai kebutuhan */
+    display: flex;
+    justify-content: space-between; /* Agar kedua elemen berada di sisi berlawanan */
+    align-items: center; /* Agar item di tengah secara vertikal */
+    position: fixed; /* Buat header tetap */
+    width: 100%; /* Lebarkan ke seluruh layar */
+    top: 0; /* Posisikan di bagian atas */
+    z-index: 999; /* Pastikan di atas konten lain */
+    border-bottom: 1px solid #ddd; /* Tambahkan border bawah */
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 1.5em; /* Sesuaikan ukuran font sesuai kebutuhan */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-right ul li {
+    margin-left: 1em; /* Jarak antar item menu */
+}
+
+.header-right ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1em; /* Sesuaikan ukuran font */
+}
+
+/* Style untuk konten di bawah header agar tidak tertutup oleh header */
+.main-content {
+    padding-top: 80px; /* Sesuaikan padding sesuai tinggi header */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.camera-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Add your custom CSS here */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.result h2 {
+    text-align: center;
+    color: #333;
+}
+
+.result-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.result-details {
+    text-align: left;
+    max-width: 500px;
+    width: 100%;
+}
+
+.result-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.result-details p strong {
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    background-color: #161616;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #161616;
+}

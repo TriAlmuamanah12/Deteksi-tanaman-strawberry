@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Strawberry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Deteksi Penyakit Tanaman Strawberry</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('artikel') }}">Informasi Penyakit</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Deteksi Penyakit Strawberry</h1>
+        <div class="camera-section">
+            <video id="video" width="320" height="240" autoplay></video>
+            <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+            <div class="buttons">
+                <form id="upload-form" method="post" enctype="multipart/form-data">
+                    <input type="file" id="file-input" name="file" accept="image/*">
+                    <input type="hidden" id="image-data" name="image-data">
+                    <button id="snap">Ambil Gambar</button>
+                    <button type="submit">Deteksi</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Deteksi Penyakit Tanaman Strawberry</p>
+    </footer>
+</body>
+</html>

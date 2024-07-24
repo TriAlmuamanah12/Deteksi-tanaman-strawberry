@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Tanaman Strawberry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background: #ffffff;
+            color: #000000;
+            padding: 1.1em 0.0em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            border-bottom: 1px solid #ddd;
+        }
+        main {
+            padding: 80px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Deteksi Penyakit Tanaman Strawberry</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('artikel') }}">Informasi Penyakit</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Detection History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Result</th>
+                    <th>Timestamp</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for history in histories %}
+                    <tr>
+                        <td>{{ history.id }}</td>
+                        <td>{{ history.result }}</td>
+                        <td>{{ history.timestamp }}</td>
+                        <td><img src="{{ url_for('uploaded_file', filename=history.img_path) }}" alt="Image" width="100"></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Deteksi Penyakit Tanaman Strawberry</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Tanaman Strawberry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Deteksi Penyakit Tanaman Strawberry</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('artikel') }}">Informasi Penyakit</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="about-image">
+            <img src="{{ url_for('static', filename='images/about-image.jpg') }}" alt="Tentang Kami Image">
+            <div class="about-text">
+                <h2>Panduan Praktis untuk Tanaman Strawberry</h2>
+                <p>Mengidentifikasi Penyakit dan Mengatasinya dengan Efisien!</p>
+            </div>
+        </section>
+        <section class="about">
+            <h2>Tentang Kami</h2>
+            <p>Tingkatkan hasil panen Anda dengan bantuan platform deteksi penyakit tanaman strawberry kami. Dengan teknologi canggih, kami memberikan solusi tepat waktu untuk mengidentifikasi dan mengatasi penyakit yang mengancam pertumbuhan tanaman Anda.</p>
+        </section>
+        <section class="info">
+            <h2>Informasi Penyakit Tanaman Strawberry</h2>
+            <div class="disease-cards">
+                <div class="card">
+                    <a href="{{ url_for('busuk_buah_matang') }}">
+                    <img src="{{ url_for('static', filename='images/disease1.jpg') }}" alt="Disease 1">
+                    <p>Busuk Buah Matang</p>
+                </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('busuk_rhizopus') }}">
+                    <img src="{{ url_for('static', filename='images/disease2.jpg') }}" alt="Disease 2">
+                    <p>Busuk Rhizopus</p>
+                </a>
+                </div>
+                <div class="card">
+                    <a href="{{ url_for('tip_burn') }}">
+                    <img src="{{ url_for('static', filename='images/disease3.jpg') }}" alt="Disease 3">
+                    <p>Tip Burn</p>
+                </a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Deteksi Penyakit Tanaman Strawberry</p>
+        </footer>
+    </main>
+</body>
+</html>

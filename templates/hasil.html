@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-bottom: 50px; /* Added margin-bottom for spacing */
+        }
+
+        .result h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .result-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .result-image {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .result-details {
+            text-align: left;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .result-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .result-details th, .result-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .result-details th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .result-details td {
+            color: #555;
+        }
+
+        .btn-medicine {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #272928;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Deteksi Penyakit Tanaman Strawberry</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('artikel') }}">Informasi Penyakit</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <div class="result">
+            <h2>Hasil Prediksi</h2>
+            <div class="result-content">
+                <img src="{{ url_for('uploaded_file', filename=result.img_path) }}" alt="Gambar strawberry" class="result-image">
+                <div class="result-details">
+                    <table>
+                        <tr>
+                            <th>Prediksi</th>
+                            <td>{{ result.prediction }}</td>
+                        </tr>
+                        <tr>
+                            <th>Gejala</th>
+                            <td>{{ result.symptoms }}</td>
+                        </tr>
+                        <tr>
+                            <th>Pengendalian</th>
+                            <td>{{ result.control }}</td>
+                        </tr>
+                        <tr>
+                            <th>Rekomendasi Obat</th>
+                            <td>
+                                <a href="{{ url_for('rekomendasi_obat', medicine=result.medicine, disease=result.prediction) }}" class="btn-medicine">Lihat Rekomendasi Obat</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Deteksi Penyakit Tanaman Strawberry</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Penyakit Tip Burn</title>
+    <!-- Menyertakan stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Gaya untuk seluruh halaman */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Memastikan konten memenuhi tinggi viewport */
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Gaya untuk header */
+        header {
+            width: 100%;
+            background-color: #ffff;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Gaya untuk konten utama */
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0; /* Memberikan margin vertikal */
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .content {
+            width: 100%;
+            text-align: justify;
+        }
+
+        .disease-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        p, li {
+            text-align: justify;
+        }
+
+        /* Gaya untuk header dan judul */
+        main {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px; /* Memberikan lebih banyak spasi antara header dan main */
+            flex-grow: 1; /* Memungkinkan main mengambil ruang yang tersedia */
+        }
+
+        h1 {
+            margin-top: 20px; /* Memberikan jarak antara header dan judul */
+            font-size: 28px;
+            color: #012709;
+        }
+
+        /* Gaya untuk footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Menyelaraskan konten secara horizontal */
+            align-items: center; /* Menyelaraskan konten secara vertikal */
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Gaya untuk tombol kembali */
+        .back-button {
+            display: inline-block;
+            margin: 20px 0 40px; /* Tambahkan margin bawah untuk spasi dengan footer */
+            padding: 10px 20px;
+            background-color: #012709;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #014f14;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Deteksi Penyakit Tanaman Strawberry</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('artikel') }}">Informasi Penyakit</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Informasi Penyakit Tip Burn</h1>
+    </main>
+    <div class="container">
+        <div class="content">
+            <img src="{{ url_for('static', filename='images/Tip-burnnn.jpg') }}" alt="Tip Burn" class="disease-image">
+            <p>Tip Burn adalah defisiensi kalsium lokal yang sering disebabkan oleh terbatasnya alokasi kalsium yang disebabkan oleh aliran massa (transpirasi). Kejadian tip burn dapat dikaitkan dengan VPD (atau kelembapan rendah) yang relatif tinggi di dalam rumah kaca yang menyebabkan transpirasi berlebihan dan turgor yang lebih rendah sehingga membatasi pasokan kalsium ke jaringan meristematik yang sedang tumbuh. Oleh karena itu luka bakar pada ujung mungkin pertama kali terlihat sebagai ujung pucuk berwarna lebih gelap, yang kemudian berkembang menjadi ujung distal daun atau kelopak yang nekrotik. Luka bakar kelopak sangat bermasalah karena mengurangi kualitas kosmetik (visual) buah stroberi.</p>
+            Meskipun luka bakar pada ujung/kelopak merupakan akibat dari kekurangan kalsium, seringkali terdapat cukup jumlah kalsium di zona akar. Oleh karena itu, hanya meningkatkan konsentrasi kalsium dalam larutan nutrisi mungkin tidak menyelesaikan masalah. Solusi umum yang mungkin dicoba oleh para petani adalah pasokan kalsium daun. Direkomendasikan agar aplikasi mencakup seluruh ujung pucuk dan daun yang sedang tumbuh, bukan daun dan kelopak yang bergejala (karena tidak dapat diubah).
+            <p><strong>Gejala Penyakit Tip Burn:</strong></p>
+                Gejala tip burn bisa dilihat pada ujung daun tanaman strawberry yang terlihat terbakar. Daun yang menunjukkan gejala menjadi tidak segar dan pertumbuhannya terhambat. Gejala ini dapat terlihat di daun baru, lalu menyebar dari pusar tumbuh. Tip burn bisa menjadi indikasi kekurangan kalsium yang mengakibatkan sel daun
+            <p><strong>Penyebab Penyakit Tip Burn:</strong></p>
+                Penyebab penyakit tip burn pada tanaman strawberry karena Kekurangan kalsium menyebabkan tip terbakar
+                Stroberi yang ditanam di rumah kaca dan terowongan plastik sangat rentan terhadap luka bakar pada daun dan ujung bunga ini, terutama bila kadar Ca dalam larutan nutrisi turun di bawah 2mmol (80mg Ca/l).
+            <p><strong>Pengelolaan Pada Penyakit Tip Burn:</strong></p>
+            Tip burn pada tanaman stroberi merupakan kondisi di mana tepi daun tanaman menjadi coklat dan kering. Kondisi ini sering kali disebabkan oleh kekurangan kalsium atau ketidakseimbangan nutrisi, serta faktor lingkungan seperti kelembaban yang tinggi dan sirkulasi udara yang buruk. Berikut ini adalah beberapa langkah pengelolaan yang dapat dilakukan untuk mencegah dan mengatasi tip burn pada tanaman stroberi:
+            <ol>
+                <li>Manajemen Nutrisi</li>
+                <ul>
+                    <li>Kalsium: Pastikan tanaman mendapatkan kalsium yang cukup. Kalsium sangat penting untuk pertumbuhan daun yang sehat. Aplikasikan pupuk yang kaya kalsium atau semprotkan kalsium langsung ke daun.</li>
+                    <li>pH Tanah: Pertahankan pH tanah pada kisaran 6,0-6,5 untuk memastikan ketersediaan nutrisi optimal bagi tanaman stroberi.</li>
+                    <li>Pupuk Seimbang: Gunakan pupuk dengan kandungan nitrogen, fosfor, dan kalium yang seimbang untuk menghindari ketidakseimbangan yang dapat mempengaruhi penyerapan kalsium.</li>
+                </ul>
+                <li>Irigasi yang Tepat</li>
+                <ul>
+                    <li>Konsistensi Kelembaban: Pastikan tanaman mendapatkan air secara konsisten, tetapi jangan terlalu banyak. Kelembaban tanah yang berlebihan dapat menghambat penyerapan kalsium.</li>
+                    <li>Sistem Irigasi Tetes: Menggunakan sistem irigasi tetes dapat membantu mengatur kelembaban tanah dengan lebih baik dan mencegah fluktuasi yang ekstrem.</li>
+                </ul>
+                <li>Pengelolaan Lingkungan</li>
+                <ul>
+                    <li>Sirkulasi Udara: Pastikan ada sirkulasi udara yang baik di sekitar tanaman untuk mengurangi kelembaban berlebih yang bisa menyebabkan tip burn.</li>
+                    <li>Kelembaban Relatif: Jaga kelembaban relatif di sekitar tanaman pada tingkat yang optimal, biasanya antara 60-70%, untuk mengurangi risiko penyakit.</li>
+                </ul>
+                <li>Praktik Budidaya yang Baik</li>
+                <ul>
+                    <li>Pemangkasan: Lakukan pemangkasan secara rutin untuk meningkatkan sirkulasi udara di sekitar daun dan mengurangi kelembaban.</li>
+                    <li>Pengelolaan Kanopi: Atur kepadatan tanaman untuk memastikan setiap tanaman mendapatkan cukup cahaya dan udara.</li>
+                </ul>
+            </ol>
+            <p><strong>Pengendalian dan Pengobatan:</strong></p>
+            Pengendalian dan pengobatan busuk Rhizopus pada tanaman strawberry dapat melibatkan beberapa langkah berikut:
+            <ol>
+                <li>Aplikasi fungisida yang sesuai dapat membantu mengendalikan pertumbuhan dan penyebaran jamur Rhizopus spp. Pemilihan fungisida yang efektif harus didasarkan pada jenis jamur yang menyebabkan infeksi dan ketersediaan produk yang disetujui untuk digunakan pada tanaman strawberry.</li>
+                <li>Menjaga kebersihan di kebun atau area penanaman sangat penting untuk mencegah penyebaran penyakit. Bersihkan sisa-sisa tanaman yang jatuh, buah yang terinfeksi, dan material organik lainnya secara teratur. Hindari penumpukan material organik yang dapat menjadi tempat berkembang biak bagi jamur Rhizopus spp.</li>
+                <li>Lakukan pemantauan rutin terhadap tanaman strawberry untuk mendeteksi gejala awal infeksi busuk Rhizopus. Buang buah yang terinfeksi dengan segera untuk mencegah penyebaran infeksi ke tanaman lainnya.</li>
+                <li>Atur kelembaban tanah dengan baik untuk mengurangi kondisi yang mendukung pertumbuhan jamur. Hindari kelembaban berlebih yang dapat memicu pertumbuhan jamur Rhizopus spp. yang merugikan.</li>
+                <li>Pilih varietas strawberry yang tahan terhadap penyakit, jika tersedia. Beberapa varietas memiliki ketahanan alami terhadap busuk Rhizopus dan penyakit lainnya.</li>
+                <li>Praktik rotasi tanaman dapat membantu mengurangi penumpukan patogen tanah, termasuk jamur Rhizopus spp. Rotasi tanaman memungkinkan tanah untuk pulih dan mengurangi risiko infeksi pada tanaman berikutnya.</li>
+            </ol>
+            <p><strong>Referensi:</strong></p>
+            <ol>
+                <li>https://cales.arizona.edu/strawberry/Hydroponic_Strawberry_Information_Website/Tip_Burn.html</li>
+                <li>https://agri.kompas.com/read/2023/06/18/202856284/5-jenis-penyakit-tanaman-strawberry-dan-gejalanya</li>
+            </ol>
+            <!-- Tombol untuk kembali ke halaman utama -->
+            <a href="{{ url_for('artikel') }}" class="back-button">Kembali</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Deteksi Penyakit Tanaman Strawberry</p>
+    </footer>
+</body>
+</html>

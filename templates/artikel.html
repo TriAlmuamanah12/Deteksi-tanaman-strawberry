@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Penyakit Tanaman Strawberry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Deteksi Penyakit Tanaman Strawberry</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('artikel') }}">Informasi Penyakit</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1 class="main-title">Informasi Penyakit Tanaman Strawberry</h1>
+        <div class="container">
+            {% for disease in diseases %}
+            <div class="card">
+                <img src="{{ url_for('static', filename=disease.image) }}" alt="{{ disease.name }}">
+                <h2>{{ disease.name }}</h2>
+                {% if disease.detail_route %}
+                <a href="{{ url_for(disease.detail_route) }}"><button>Informasi Detail Penyakit</button></a>
+                {% else %}
+                <p>{{ disease.detail }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Deteksi Penyakit Tanaman Strawberry</p>
+    </footer>
+</body>
+</html>
